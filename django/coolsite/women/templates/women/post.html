@@ -1,0 +1,13 @@
+{% extends 'women/base.html' %}
+{% load women_tags %}
+{% block content %}
+<ul class="post">
+	<h1>{{post.title}}</h1>
+
+	{% if post.photo %}
+	<p><img class="img-article-left" src="{{post.photo.url}}"></p>
+	{% endif %}
+	{{post.content|linebreaks}}
+	<p class="link-read-post"><a href="{% url 'home' %}">Назад</a></p>
+</ul>
+{% endblock %}
