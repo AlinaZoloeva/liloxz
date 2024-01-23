@@ -1,0 +1,140 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>EduWell - Education HTML5 Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link type="text/css" href="{% static 'cafe/css/bootstrap.min.css' %}" rel="stylesheet" />
+
+
+
+    <!-- Additional CSS Files -->
+    <link type="text/css" href="{% static 'cafe/css/fontawesome.css' %}" rel="stylesheet" />
+    <link type="text/css" href="{% static 'cafe/css/templatemo-eduwell-style.css' %}" rel="stylesheet" />
+    <link type="text/css" href="{% static 'cafe/css/owl.css' %}" rel="stylesheet" />
+    <link type="text/css" href="{% static 'cafe/css/lightbox.css' %}" rel="stylesheet" />
+    <link rel="shortcut icon" href="{% static 'cafe/images/eduwell-icon.png' %}" type="image/x-icon"/>
+
+<!--
+
+TemplateMo 573 EduWell
+
+https://templatemo.com/tm-573-eduwell
+
+-->
+  </head>
+
+<body>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="{% url 'home' %}" class="logo">
+                          <img src="{% static 'cafe/images/templatemo-eduwell.png' %}" alt="EduWell Template">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="#top" class="active">Начало</a></li>
+                          <li class="scroll-to-section"><a href="#services">Услуги</a></li>
+                          <li class="scroll-to-section"><a href="#courses">Курсы</a></li>
+                          <li class="has-sub">
+                              <a href="javascript:void(0)">Общее</a>
+                              <ul class="sub-menu">
+                                  <li><a href="{% url 'about' %}">О нас</a></li>
+                                  <li><a href="{% url 'services' %}">Наши услуги</a></li>
+                                  <li><a href="{% url 'contact' %}">Связь</a></li>
+                              </ul>
+                          </li>
+                          <li class="scroll-to-section"><a href="#testimonials">Рекомендации</a></li>
+                          <li class="scroll-to-section"><a href="#contact-section">Связаться с нами</a></li>
+                      </ul>
+                      <a class='menu-trigger'>
+                          <span>Меню</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <!-- ***** Header Area End ***** -->
+
+{% block content %}
+{% endblock%}
+
+    <script src="{% static 'cafe/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'cafe/js/bootstrap.min.js' %}"></script>
+
+
+    <script src="{% static 'cafe/js/isotope.min.js' %}"></script>
+    <script src="{% static 'cafe/js/owl-carousel.js' %}"></script>
+    <script src="{% static 'cafe/js/lightbox.js' %}"></script>
+    <script src="{% static 'cafe/js/tabs.js' %}"></script>
+    <script src="{% static 'cafe/js/video.js' %}"></script>
+    <script src="{% static 'cafe/js/slick-slider.js' %}"></script>
+    <script src="{% static 'cafe/js/custom.js' %}"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+
+</body>
+
+</html>

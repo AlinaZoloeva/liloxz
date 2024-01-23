@@ -1,0 +1,395 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="main-banner" id="top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="header-text">
+            <h6>Добро пожаловать!</h6>
+            <h5>Учитесь Вместе С Нами Графическому <em>Дизайну!</em></h5>
+            <div class="main-button-gradient">
+              <div class="scroll-to-section"><a href="#contact-section">Присоединиться!</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="right-image">
+            <img src={% static 'cafe/images/banner-right-image.png' %} alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Наши услуги</h6>
+            <h4>Предоставляемые <em>Услуги</em></h4>
+          </div>
+        </div>
+
+        <div class="col-lg-12">
+          <div class="owl-service-item owl-carousel">
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'cafe/images/service-icon-01.png' %}" alt="">
+                </div>
+                <h4>Учебные материалы</h4>
+                <p>Разрабатываются специалистами, имеющими большой опыт разработки.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+
+                  <img src="{% static 'cafe/images/service-icon-02.png' %}" alt="">
+                </div>
+                <h4>Наш подход</h4>
+                <p>одно из главных целей - стимулирование творческого мышления и развитии индивидуальности каждого ученика.</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'cafe/images/service-icon-03.png' %}" alt="">
+                </div>
+                <h4>Преподаватели</h4>
+                <p>Наши преподаватели − высококвалифицированные специалисты, которые имеют высшее образование и многолетний опыт работы в ведущих it-компаниях страны. </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="service-item">
+                <div class="icon">
+                  <img src="{% static 'cafe/images/service-icon-04.png' %}" alt="">
+                </div>
+                <h4>Технологии</h4>
+                <p>Бла-бла-бла-блаа</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="our-courses" id="courses">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>О курсах</h6>
+            <h4>Что вы можете <em>Изучать</em></h4>
+            <p>У нас есть различные направления обучения, в полной мере охватывающие соответствующие направления разработки</p>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="naccs">
+            <div class="tabs">
+              <div class="row">
+                <div class="col-lg-3">
+                  <div class="menu">
+                    <div class="active gradient-border"><span>Frontend-разработка</span></div>
+                    <div class="gradient-border"><span>Backend-разработка</span></div>
+                    <div class="gradient-border"><span>UX/UI дизайн</span></div>
+                    <div class="gradient-border"><span>Data Science</span></div>
+                  </div>
+                </div>
+                <div class="col-lg-9">
+                  <ul class="nacc">
+                    <li class="active">
+                      <div>
+                        <div class="left-image">
+                          <img src="{% static 'cafe/images/courses-01.jpg' %}" alt="">
+                          <div class="price"><h6>$128</h6></div>
+                        </div>
+                        <div class="right-content">
+                          <h4>Frontend-разработка</h4>
+
+                          <br><br>Я волком бы выгрыз бюрократизм.
+К мандатам почтения нету.
+К любым чертям с матерями катись
+любая бумажка. Но эту...
+По длинному фронту
+чиновник учтивый движется.
+Сдают паспорта, и я сдаю
+мою пурпурную книжицу.
+К одним паспортам - улыбка у рта.
+К другим - отношение плевое.
+С почтеньем берут, например, паспорта
+с двухспальным английским левою.
+Глазами доброго дядю выев,
+не переставая кланяться,
+берут, как будто берут чаевые,
+паспорт американца.
+На польский - глядят, как в афишу коза.
+На польский - выпяливают глаза
+в тугой полицейской слоновости -
+откуда, мол, и что это за
+географические новости?
+И не повернув головы кочан
+и чувств никаких не изведав,
+берут, не моргнув, паспорта датчан
+и разных прочих шведов.
+И вдруг, как будто ожогом, рот
+скривило господину.
+Это господин чиновник берет
+мою краснокожую паспортину.
+Берет - как бомбу, берет - как ежа,
+как бритву обоюдоострую,
+берет, как гремучую в 20 жал
+змею двухметроворостую.
+Моргнул многозначаще глаз носильщика,
+хоть вещи снесет задаром вам.
+Жандарм вопросительно смотрит на сыщика,
+сыщик на жандарма.
+С каким наслажденьем жандармской кастой
+я был бы исхлестан и распят
+за то, что в руках у меня молоткастый,
+серпастый советский паспорт.
+Я волком бы выгрыз бюрократизм.
+К мандатам почтения нету.
+К любым чертям с матерями катись
+любая бумажка. Но эту...
+Я достаю из широких штанин
+дубликатом бесценного груза.
+Читайте, завидуйте, я - гражданин Советского Союза.</p>
+                          <span>36 Часов</span>
+                          <span>4 Недели</span>
+                          <span class="last-span">3 Сертификата</span>
+                          <div class="text-button">
+                            <a href="contact-us.html">Записаться на курс</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="left-image">
+                          <img src="{% static 'cafe/images/courses-02.jpg' %}" alt="">
+                          <div class="price"><h6>$156</h6></div>
+                        </div>
+                        <div class="right-content">
+                          <h4>Backend-разработка</h4>
+                          <p>Backend-разработка связана с созданием серверной части веб-приложений, которая включает в себя разработку баз данных, API, логики приложений и интеграцию с другими системами. Backend-разработчики обычно работают с языками программирования, такими как Python, Java или Node.js, и используют фреймворки и библиотеки для оптимизации и ускорения работы приложений. Они также отвечают за обеспечение безопасности данных и соблюдения нормативных требований.</p>
+                          <span>48 Часов</span>
+                          <span>6 Недели</span>
+                          <span class="last-span">1 Сертификат</span>
+                          <div class="text-button">
+                            <a href="contact-us.html">Записаться на курс</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="left-image">
+                          <img src="{% static 'cafe/images/courses-03.jpg' %}" alt="">
+                          <div class="price"><h6>$184</h6></div>
+                        </div>
+                        <div class="right-content">
+                          <h4>UX/UI дизайн</h4>
+                          <p>UI/UX дизайн является важным аспектом разработки веб-приложений и мобильных приложений, поскольку он определяет, насколько легко и удобно пользователи могут взаимодействовать с продуктом. UI-дизайнеры отвечают за создание интуитивно понятных и привлекательных интерфейсов, в то время как UX-дизайнеры фокусируются на изучении пользовательского опыта и обеспечении того, чтобы продукт был удобен и эффективен для пользователей. Важными навыками для UI/UX дизайнеров являются креативность, понимание пользовательских потребностей и знание современных трендов в дизайне.</p>
+                          <span>28 Часов</span>
+                          <span>4 Недели</span>
+                          <span class="last-span">1 Сертификат</span>
+                          <div class="text-button">
+                            <a href="contact-us.html">Записаться на курс</a>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <div class="left-image">
+                          <img src="{% static 'cafe/images/courses-04.jpg' %}" alt="">
+                          <div class="price"><h6>$76</h6></div>
+                        </div>
+                        <div class="right-content">
+                          <h4>Data Science</h4>
+                          <p>Кабачки - это популярный овощ, который имеет множество полезных свойств для здоровья. Они богаты витаминами С и К, а также калием, который помогает регулировать кровяное давление. Кабачки также содержат антиоксиданты, которые могут помочь защитить организм от свободных радикалов и снизить риск развития некоторых видов рака. Кроме того, кабачки легко усваиваются и могут быть включены в различные блюда, включая жареные кабачки, рагу и запеканки.</p>
+                          <span>48 Часов</span>
+                          <span>4 Недели</span>
+                          <span class="last-span">2 Сертификата</span>
+                          <div class="text-button">
+                            <a href="contact-us.html">Записаться на курс</a>
+                          </div>
+                        </div>
+                      </div>
+                      </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="simple-cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5 offset-lg-1">
+          <div class="left-image">
+            <img src="{% static 'cafe/images/cta-left-image.png' %}" alt="">
+          </div>
+        </div>
+        <div class="col-lg-5 align-self-center">
+          <h6>Переходите к покупке прямо сейчас!</h6>
+          <h4>Скидка до 50% на 1 + курсы</h4>
+          <p>Pussy juicy на тусе, Gucci mommy на Juicy
+Juicy, juicy, деньги, деньги, money, money, туси, juicy
+Моя жопа на тусе, мои доллары в плюсе
+Мне караты на уши, на мне дорого бусы
+Pussy juicy на тусе, Gucci mommy на Juicy
+Juicy, juicy, деньги, деньги, money, money, туси, juicy
+Моя жопа на тусе, мои доллары в плюсе
+Мне караты на уши, на мне дорого бусы</p>
+          <div class="white-button">
+            <a href="contact-us.html">Смотреть курсы</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h6>Отзывы</h6>
+            <h4>Что о нас <em>Думают</em></h4>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-testimonials owl-carousel" style="position: relative; z-index: 5;">
+            <div class="item">
+              <p>“Очень интересные задания, информативные занятия, крутые преподаватели, старающиеся всеми силами помочь тебе усвоить материал!”</p>
+                <h4>Андрей Якушкин</h4>
+
+                <img src="{% static 'cafe/images/quote.png' %}"  alt="">
+            </div>
+            <div class="item">
+              <p>“Отличный подход к обучению, слаженная работа преподавателей и кураторов”</p>
+                <h4>Иван Калинин</h4>
+
+                <img src="{% static 'cafe/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Нравится, что обучение очень гибкое, можно учиться, когда удобно”</p>
+                <h4>Мария Нарышкина</h4>
+
+                <img src="{% static 'cafe/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Смогла трудоустроиться после окончания курса, очень благодарна команде EduWell!”</p>
+                <h4>Анна Никифорова</h4>
+
+                <img src="{% static 'cafe/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Есть простор для мысли, тебя не загоняют в рамки, учитывают твое мнение, позволяют высказать свою точку зрения по каждому вопросу”</p>
+                <h4>Георгий Анисимов</h4>
+
+                <img src="{% static 'cafe/images/quote.png' %}" alt="">
+            </div>
+            <div class="item">
+              <p>“Очень понравилось обучение, дали толчок для развития, направили на верный путь, буду работать далее”</p>
+                <h4>Катерина Петрова</h4>
+
+                <img src="{% static 'cafe/images/quote.png' %}" alt="">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-us" id="contact-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div id="map">
+
+            <!-- You just need to go to Google Maps for your own map point, and copy the embed code from Share -> Embed a map section -->
+                        <iframe src="https://yandex.ru/map-widget/v1/?indoorLevel=1&ll=37.614608%2C55.755804&mode=search&oid=1064113182&ol=biz&z=16.65" width="85%" height="420px" frameborder="0" style="border:0; border-radius: 15px; position: relative; z-index: 2;" allowfullscreen=""></iframe>
+            <br>
+            <br>
+            <br>
+            <div class="row">
+
+              <div class="col-lg-4">
+                <div class="contact-info">
+                  <div class="icon">
+                    <i class="fa fa-phone"></i>
+                  </div>
+
+                  <h4>Телефон</h4>
+                  <span>8-800-555-35-35</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <form id="contact" action="" method="post">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="section-heading">
+                  <h6>Связаться с нами</h6>
+                  <h4>Say <em>Hello</em></h4>
+
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="name" name="name" id="name" placeholder="Имя" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Email" required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <textarea name="message" id="message" placeholder="Ваше сообщение"></textarea>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="main-gradient-button">Отправить</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-12">
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-12">
+          <p class="copyright">Copyright © 2023 EduWell Co., Ltd. All Rights Reserved.
+
+          <br>Design: <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}
