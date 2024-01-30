@@ -65,6 +65,7 @@ def shop_cat(request, shop_slug):
     else:
         products = Product.objects.filter(cat__slug=shop_slug)
     categ = Category.objects.all()
+    print(categ)
 
     try:
         cart = Cart.objects.filter(user=request.user)
