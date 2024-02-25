@@ -19,7 +19,7 @@ from tmp import extract_table, table_converter, transform_date, has_cyrillic, da
 import telebot
 from telebot import types
 
-bot = telebot.TeleBot('6848011070:AAHWP6WaxXsej_O4fMSp9ESkvbjjMGMFr8I')
+bot = telebot.TeleBot('token')
 
 
 @bot.message_handler(commands=['mtuci'])
