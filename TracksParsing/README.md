@@ -1,5 +1,6 @@
-Программа парсит треки из раздела "Популярные треки" сайта https://rus.hitmotop.com/
+Программа парсит ссылки на треки из раздела "Популярные треки" сайта https://rus.hitmotop.com/
 
-Треки сохраняются в папке music в текущей директории
+Затем телеграм бот скачивает рандомный трек по ссылке и отправляет в чат
 
-![](https://github.com/AlinaZoloeva/liloxz/blob/main/parsing_tracks/music/exp/20240206182947_1.gif)
+
+![](https://github.com/AlinaZoloeva/liloxz/blob/main/TracksParsing/cash/IMG_3003.gif)
