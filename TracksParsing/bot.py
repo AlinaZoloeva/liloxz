@@ -1,16 +1,9 @@
-import time
-
 from main import *
-import getpass
 import os
-import sys
 from pathlib import Path
 
 
-import requests
-from bs4 import BeautifulSoup
-from colorama import init, Fore
-from tqdm import tqdm
+from colorama import init
 
 init(autoreset=True)
 import telebot
@@ -68,7 +61,5 @@ def func(message):
 
     else:
         bot.send_message(message.chat.id, text="Я не знаю эту команду((")
-
-
 
 bot.polling()
