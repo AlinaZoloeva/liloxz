@@ -9,7 +9,7 @@ init(autoreset=True)
 import telebot
 from telebot import types
 
-bot = telebot.TeleBot('6705707173:AAHRN9iMKFYvzQncKNDk-XX20xFZpdcyPeo')
+bot = telebot.TeleBot('token')
 tracks = []
 
 @bot.message_handler(commands=['mtuci'])
