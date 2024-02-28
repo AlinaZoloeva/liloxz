@@ -1,14 +1,12 @@
 import getpass
 import os
+import random
 import sys
 from pathlib import Path
-from urllib.parse import urljoin
-from pathlib import Path
 
-import mutagen
+
 import requests
 from bs4 import BeautifulSoup
-from colorama import Fore
 from colorama import init, Fore
 from tqdm import tqdm
 
@@ -81,7 +79,7 @@ def track_download(url, path) -> bool:
                 for data in progress.iterable:
                     f.write(data)
                     progress.update(len(data))
-        return False
+        return filename
     except KeyboardInterrupt:
         (path / filename).unlink()
         print(f"\n{Fore.GREEN}До свидания: {Fore.RESET}{getpass.getuser()}\n")
@@ -90,19 +88,83 @@ def track_download(url, path) -> bool:
         print(f"Не удалось загрузить: {url}")
         return False
 
+'''
+if __name__ == '__main__':
+    import time
 
-url = 'https://rus.hitmotop.com/songs/top-today'
-dir_path = Path.home()
-path = Path(dir_path, 'repos', 'parsing_tracks', 'music')
-try:
-    count_list = int(input('Сколько страниц из раздела "Популярные треки" вы хотите загрузить? '))
-except:
-    count_list = 1
-count_list -= 1
-temp = get_links(path, count_list * 48, url)
+    from main import *
+    import getpass
+    import os
+    import sys
+    from pathlib import Path
 
-tracks = temp[0]
+    import requests
+    from bs4 import BeautifulSoup
+    from colorama import init, Fore
+    from tqdm import tqdm
 
-for track in tracks:
-    track_download(track, path)
+    init(autoreset=True)
+    import telebot
+    from telebot import types
 
+    bot = telebot.TeleBot('6705707173:AAHRN9iMKFYvzQncKNDk-XX20xFZpdcyPeo')
+    tracks = []
+
+
+    @bot.message_handler(commands=['mtuci'])
+    def answer(message):
+        bot.send_message(message.chat.id, 'https://mtuci.ru/')
+
+
+    @bot.message_handler(commands=['help'])
+    def answer(message):
+        bot.send_message(message.chat.id, 'Бот для получения случайного трека из чарта\n'
+                                          'Гайд по командам:\n'
+                                          '/track - скинуть случайный трек\n')
+
+
+    @bot.message_handler(commands=['start'])
+    def start(message):
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
+        bot.send_message(message.chat.id,
+                         text="Привет, {0.first_name}! Я бот для получения случайного трека из чарта".format(
+                             message.from_user), reply_markup=markup)
+
+        url = 'https://rus.hitmotop.com/songs/top-today'
+        dir_path = Path.cwd()
+        path = Path(dir_path, 'music')
+
+        count_list = 10
+        bot.send_message(message.chat.id, 'Подождем загрузки треков....', reply_markup=markup)
+        temp = get_links(path, count_list * 48, url)
+        bot.send_message(message.chat.id, 'Жми "Трек"!', reply_markup=markup)
+        btn1 = types.KeyboardButton("Трек")
+        markup.row(btn1)
+
+        tracks.extend(temp[0])
+
+
+    @bot.message_handler(content_types=['text'])
+    def func(message):
+        if (message.text == "Трек"):
+            dir_path = Path.cwd()
+            path = Path(dir_path, 'music')
+
+            i = random.randint(1, len(tracks))
+
+            filename = track_download(tracks[i], path)
+            path = Path(dir_path, 'music', str(filename))
+            f = open(path, "rb")
+
+            bot.send_document(message.chat.id, f)
+
+            f.close()
+
+            os.remove(path)
+
+        else:
+            bot.send_message(message.chat.id, text="Я не знаю эту команду((")
+
+
+    bot.polling()
+'''
