@@ -2,4 +2,4 @@
 
 Треки сохраняются в папке music в текущей директории
 
-![](https://github.com/AlinaZoloeva/liloxz/blob/main/parsing_tracks/music/exp/20240206182947_1.gif)
+![](https://github.com/AlinaZoloeva/liloxz/blob/main/TracksParsing/cash/IMG_3003.gif)
