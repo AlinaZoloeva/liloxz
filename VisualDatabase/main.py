@@ -28,7 +28,7 @@ class MainWindow(QWidget):
     def _connect_to_db(self):
         self.conn = psycopg2.connect(database="vsdb",
                                      user="postgres",
-                                     password="1m7v89c1w",
+                                     password="",
                                      host="localhost",
                                      port="5432")
 
