@@ -3,4 +3,4 @@
 Реализована возможность добавления товаров в корзину, оформления заказа.
 Все товары, категории товаров хранятся в бд.
 
-![](https://github.com/AlinaZoloeva/liloxz/blob/main/shop/shop/shopclothes/static/shopclothes/images/EShopper.gif)
+![](https://github.com/AlinaZoloeva/liloxz/blob/main/ShopDjango/shop/shopclothes/static/shopclothes/images/EShopper.gif)
