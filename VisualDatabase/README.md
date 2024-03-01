@@ -3,4 +3,4 @@ CRUD приложение для отображения расписания, о
 Свизуализировано с помощью PyQt5
 
 
-![]()
+![](https://github.com/AlinaZoloeva/liloxz/blob/main/VisualDatabase/cash/IMG_3025.gif)
