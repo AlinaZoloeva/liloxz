@@ -2,4 +2,4 @@
 Есть возможность просмотреть расписание на сегодня/завтра, на неделю/следующую неделю.
 Бот был реализован с помощью telebot, парсинг с помощью BeautifulSoup, есть также вариант, где парсинг происходит с помощью selenium
 
-![]()
+![](https://github.com/AlinaZoloeva/liloxz/blob/main/ScheduleParsBot/tmp/IMG_3028.gif)
